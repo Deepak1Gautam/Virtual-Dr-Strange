@@ -38,6 +38,28 @@ Using **real-time hand tracking and gesture recognition**, you can control visua
 
 ---
 
+---
+
+## 🎨 Concept Preview
+
+<table>
+<tr>
+<td align="center">
+
+<img src="assets/concept-preview.png" width="50%" alt="Virtual Dr. Strange Concept Preview">
+
+<br>
+
+### 🌀 Gesture-Controlled Magic
+
+<i>Concept visualization of the Virtual Dr. Strange experience.</i>
+
+</td>
+</tr>
+</table>
+
+---
+
 ## ✨ Features
 
 <table>
@@ -102,7 +124,7 @@ Provides audio feedback for selected actions and commands.
 
 <div align="center">
 
-<img src="assets/demo.png" width="75%" alt="Virtual Dr Strange Demo">
+<img src="assets/demo.png" width="70%" alt="Virtual Dr Strange Demo">
 
 <br><br>
 
