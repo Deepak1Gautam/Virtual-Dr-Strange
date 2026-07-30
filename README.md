@@ -102,7 +102,7 @@ Provides audio feedback for selected actions and commands.
 
 <div align="center">
 
-<img src="assets/portal.png" width="75%" alt="Virtual Dr Strange Demo">
+<img src="assets/demo.png" width="75%" alt="Virtual Dr Strange Demo">
 
 <br><br>
 
