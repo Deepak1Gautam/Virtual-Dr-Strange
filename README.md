@@ -13,6 +13,10 @@
     <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-FF6B00?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo">
   </a>
 
+  <a href="https://virtual-dr-strange.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🛡️%20START%20MAGIC-8A2BE2?style=for-the-badge&logoColor=white" alt="Start Magic">
+  </a>
+
   <a href="https://github.com/Deepak1Gautam/Virtual-Dr-Strange" target="_blank">
     <img src="https://img.shields.io/badge/💻%20SOURCE%20CODE-111827?style=for-the-badge&logo=github&logoColor=white" alt="Source Code">
   </a>
@@ -23,6 +27,7 @@
   <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white">
   <img src="https://img.shields.io/badge/MediaPipe-Hand%20Tracking-00A98F?style=for-the-badge">
   <img src="https://img.shields.io/badge/Status-Active-00C853?style=for-the-badge">
+</p>
 
 <p>
   <a href="#-about-the-project">About</a> •
@@ -44,8 +49,6 @@ Using **real-time hand tracking and gesture recognition**, you can control visua
 
 > ✋ **Your hands become the controller.**  
 > 🌀 **Your gestures control the magic.**
-
----
 
 ---
 
@@ -138,6 +141,12 @@ Provides audio feedback for selected actions and commands.
 <br><br>
 
 **Real-time hand tracking + magical portal interaction**
+
+<br><br>
+
+<a href="https://virtual-dr-strange.vercel.app/" target="_blank">
+  🚀 <strong>Open Interactive Live Demo →</strong>
+</a>
 
 </div>
 
