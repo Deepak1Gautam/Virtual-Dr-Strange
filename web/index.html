@@ -21,6 +21,11 @@
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
 </head>
 
 <body>
@@ -322,62 +327,88 @@
     </section>
 
 
-    <!-- DEMO -->
-    <section id="demo" class="section">
+    <!-- INTERACTIVE DEMO -->
+<section id="demo" class="section interactive-demo-section">
 
-        <div class="section-heading">
-            <span>05 / DEMO</span>
-            <h2>See The <em>Magic</em></h2>
+    <div class="section-heading">
+        <span>05 / LIVE DEMO</span>
+        <h2>Control The <em>Magic</em></h2>
+    </div>
+
+    <div class="live-demo-card">
+
+        <div class="camera-area">
+
+            <video id="camera" autoplay playsinline></video>
+
+            <canvas id="magicCanvas"></canvas>
+
+            <div id="cameraMessage" class="camera-message">
+                <div class="camera-icon">📷</div>
+                <h3>Camera Magic</h3>
+                <p>Allow camera access and place your hand in front of the camera.</p>
+
+                <button id="startCamera" class="primary-btn">
+                    ✋ Start Magic
+                </button>
+            </div>
+
+            <div class="camera-status">
+                <span id="statusDot"></span>
+                <span id="statusText">Camera Offline</span>
+            </div>
+
         </div>
 
-        <div class="demo-card">
+        <div class="demo-info">
 
-            <div class="demo-image">
+            <span class="mini-label">INTERACTIVE EXPERIENCE</span>
 
-                <img
-    src="demo.png"
-    alt="Virtual Dr Strange project demo"
-    onerror="this.style.display='none'; document.querySelector('.demo-placeholder').style.display='flex';"
->
+            <h3>Your hand becomes the controller.</h3>
 
-                <div class="demo-placeholder">
+            <p>
+                Allow camera access and move your hand in front of the camera.
+                The browser will track your hand and generate a magical shield
+                around your palm.
+            </p>
+
+            <div class="gesture-list">
+
+                <div class="gesture-item">
+                    <span>🖐️</span>
                     <div>
-                        <span>✦</span>
-                        <p>Project Demo</p>
-                        <small>Run the Python application to experience it.</small>
+                        <strong>Open Palm</strong>
+                        <small>Activate Shield</small>
+                    </div>
+                </div>
+
+                <div class="gesture-item">
+                    <span>✊</span>
+                    <div>
+                        <strong>Fist</strong>
+                        <small>Power Mode</small>
+                    </div>
+                </div>
+
+                <div class="gesture-item">
+                    <span>✌️</span>
+                    <div>
+                        <strong>Two Fingers</strong>
+                        <small>Portal Mode</small>
                     </div>
                 </div>
 
             </div>
 
-            <div class="demo-info">
-
-                <span class="mini-label">LOCAL EXPERIENCE</span>
-
-                <h3>Cast spells with your hands.</h3>
-
-                <p>
-                    The main application uses your webcam to detect
-                    hand gestures and trigger visual effects in real time.
-                </p>
-
-                <div class="demo-buttons">
-
-                    <a
-                        href="https://github.com/Deepak1Gautam/Virtual-Dr-Strange"
-                        target="_blank"
-                        class="primary-btn"
-                    >
-                        View on GitHub ↗
-                    </a>
-
-                </div>
-
-            </div>
+            <p class="camera-note">
+                🔒 Camera processing happens inside your browser.
+            </p>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
     <!-- CTA -->

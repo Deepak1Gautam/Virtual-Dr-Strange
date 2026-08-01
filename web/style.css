@@ -1061,3 +1061,253 @@ footer a:hover {
 .nav-links a.active {
     color: var(--orange);
 }
+
+/* ================================
+   INTERACTIVE CAMERA DEMO
+================================ */
+
+.interactive-demo-section {
+    position: relative;
+}
+
+.live-demo-card {
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 140, 40, 0.2);
+    border-radius: 24px;
+    background: rgba(8, 12, 25, 0.92);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.camera-area {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    background: #02050d;
+    border-right: 1px solid rgba(255, 140, 40, 0.15);
+}
+
+#camera {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#magicCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.camera-message {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 120, 30, 0.10),
+            transparent 45%
+        ),
+        #02050d;
+}
+
+.camera-icon {
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255, 140, 40, 0.3);
+
+    background: rgba(255, 120, 30, 0.08);
+
+    font-size: 30px;
+
+    box-shadow:
+        0 0 30px rgba(255, 120, 30, 0.15);
+}
+
+.camera-message h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.camera-message p {
+    max-width: 430px;
+    margin: 0 0 24px;
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.7;
+}
+
+.camera-message .primary-btn {
+    cursor: pointer;
+    border: 0;
+}
+
+.camera-status {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border-radius: 999px;
+
+    background: rgba(0, 0, 0, 0.65);
+   
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #777;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.camera-area.active #camera {
+    opacity: 1;
+}
+
+.camera-area.active .camera-message {
+    display: none;
+}
+
+.camera-area.active #statusDot {
+    background: #00e676;
+    box-shadow: 0 0 12px rgba(0, 230, 118, 0.8);
+}
+
+.demo-info {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.demo-info h3 {
+    font-size: 32px;
+    line-height: 1.15;
+    margin: 12px 0 18px;
+}
+
+.demo-info > p {
+    color: rgba(255, 255, 255, 0.62);
+    line-height: 1.8;
+}
+
+.gesture-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.gesture-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 13px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.gesture-item > span {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 120, 30, 0.08);
+
+    font-size: 20px;
+}
+
+.gesture-item strong {
+    display: block;
+    font-size: 14px;
+}
+
+.gesture-item small {
+    display: block;
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.camera-note {
+    margin-top: 24px !important;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .live-demo-card {
+        grid-template-columns: 1fr;
+    }
+
+    .camera-area {
+        min-height: 420px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 140, 40, 0.15);
+    }
+
+    .demo-info {
+        padding: 35px 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .camera-area {
+        min-height: 350px;
+    }
+
+    .demo-info h3 {
+        font-size: 26px;
+    }
+
+}
+
